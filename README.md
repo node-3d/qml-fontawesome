@@ -2,10 +2,10 @@
 
 This is a part of [Node3D](https://github.com/node-3d) project.
 
-[![NPM](https://badge.fury.io/js/qml-fontawesome-raub.svg)](https://badge.fury.io/js/qml-fontawesome-raub)
+[![NPM](https://badge.fury.io/js/%40node-3d%2Fqml-fontawesome.svg)](https://badge.fury.io/js/@node-3d/qml-fontawesome)
 
 ```console
-npm i -s qml-fontawesome-raub
+npm install @node-3d/qml-fontawesome
 ```
 
 ![Example](examples/screenshot.png)
@@ -46,7 +46,7 @@ fonts and provides low-level interface:
 FontAwesome.icons: { [name]: string } // icon name -> unicode character
 FontAwesome.list: string[] // list of all icon names, same as `Object.keys(FontAwesome.icons)`
 FontAwesome.listUnique: string[] // list of unique icon names, excluding aliases
-FontAwesome.fonts: { // auxilary font descriptions
+FontAwesome.fonts: { // auxiliary font descriptions
 	regular: { family: string, weight: number },
 	solid: { family: string, weight: number },
 	brands: { family: string, weight: number },
@@ -98,13 +98,15 @@ import FontAwesome
 ### C++ import path
 
 ```cpp
-qmlEngine->addImportPath("path to qml-fontawesome-raub");
+qmlEngine->addImportPath("path to @node-3d/qml-fontawesome");
 ```
 
-### Node.js qml-raub
+### Node.js @node-3d/qml
 
 ```js
-View.libs(require('qml-fontawesome-raub').absPath);
+import { absPath } from '@node-3d/qml-fontawesome';
+
+View.libs(absPath);
 ```
 
 ### Manual

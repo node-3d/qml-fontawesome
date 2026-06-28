@@ -1,10 +1,10 @@
 {
 	"author": "Luis Blanco <luisblanco1337@gmail.com>",
-	"name": "qml-fontawesome-raub",
-	"version": "0.1.0",
+	"name": "@node-3d/qml-fontawesome",
+	"version": "1.0.0",
 	"description": "FontAwesome 6+ icons for QML",
 	"license": "MIT",
-	"main": "index.js",
+	"main": "dist/index.js",
 	"keywords": [
 		"qt",
 		"qml",
@@ -14,20 +14,50 @@
 		"fontawesome6"
 	],
 	"files": [
-		"index.d.ts",
-		"index.js",
+		"dist",
 		"FontAwesome",
 		"LICENSE",
-		"package.json"
+		"package.json",
+		"tsconfig.json"
 	],
-	"scripts": {},
+	"scripts": {
+		"lint:oxlint": "oxlint .",
+		"lint:all": "npm run lint:ts && npm run lint:oxlint",
+		"build:ci": "rslib build",
+		"build:watch": "rslib build --watch",
+		"lint:ts": "tsgo -p tsconfig.json --noEmit",
+		"prepare": "npm run build:ci"
+	},
 	"engines": {
-		"node": ">=12.13.0",
-		"npm": ">=6.12.0"
+		"node": ">=24.13.0",
+		"npm": ">=11.6.2"
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/node-3d/qml-fontawesome-raub.git"
+		"url": "https://github.com/node-3d/qml-fontawesome.git"
 	},
-	"dependencies": {}
+	"dependencies": {},
+	"type": "module",
+	"devDependencies": {
+		"@node-3d/addon-tools": "^11.0.0",
+		"oxlint": "^1.65.0",
+		"@rslib/core": "^0.21.3",
+		"@typescript/native-preview": "^7.0.0-dev.20260503.1",
+		"@types/node": "^24.1.0",
+		"typescript": "^6.0.3"
+	},
+	"types": "dist/index.d.ts",
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"default": "./dist/index.js"
+		}
+	},
+	"bugs": {
+		"url": "https://github.com/node-3d/node-3d/issues"
+	},
+	"homepage": "https://github.com/node-3d/node-3d#readme",
+	"publishConfig": {
+		"access": "public"
+	}
 }

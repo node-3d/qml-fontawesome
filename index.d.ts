@@ -1,4 +1,4 @@
-declare module "qml-fontawesome-raub" {
+declare module "@node-3d/qml-fontawesome" {
 	/**
 	 * Path to this module
 	 *

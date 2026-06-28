@@ -1,4 +1,4 @@
-'use strict';
+// oxlint-disable no-underscore-dangle, no-unused-vars
 
 /*
  * Parses font metadata (icons.json) to create icon names and sets.
@@ -27,14 +27,14 @@ const categorize = data => {
 		_family: {},
 		_list: [],
 	};
-	Object.entries(data).forEach(([k, v]) => {
-		const aliases = (v.aliases?.names || []).concat([k]);
-		aliases.forEach(alias => {
-			v.free.forEach(style => {
+	for (const [k, v] of Object.entries(data)) {
+		const aliases = [...(v.aliases?.names || []), k];
+		for (const alias of aliases) {
+			for (const style of v.free) {
 				const isO = style === 'regular' && v.free.length > 1 && v.free.includes('solid');
-				const normK = `${alias}`.replace(/-/g, '_');
+				const normK = `${alias}`.replaceAll('-', '_');
 				const name = isO ? `fa_${normK}_o` : `fa_${normK}`;
-				const uniStr = String.fromCharCode(parseInt(v.unicode, 16));
+				const uniStr = String.fromCodePoint(Number.parseInt(v.unicode, 16));
 				styles[style][name] = uniStr;
 				styles._all[name] = uniStr;
 				styles._family[name] = style;
@@ -42,9 +42,9 @@ const categorize = data => {
 					styles._unique[name] = uniStr;
 					styles._list.push(name);
 				}
-			});
-		});
-	});
+			}
+		}
+	}
 	return styles;
 };
 
