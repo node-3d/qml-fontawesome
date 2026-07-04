@@ -4,7 +4,7 @@
  * Parses font metadata (icons.json) to create icon names and sets.
  *
  * icons.json `icons` structure:
- * 
+ *
  * ```
  * {
  *   [name: string]: {
@@ -17,7 +17,7 @@
  * }
  * ```
  */
-const categorize = data => {
+const categorize = (data) => {
 	const styles = {
 		brands: {},
 		solid: {},
@@ -48,13 +48,12 @@ const categorize = data => {
 	return styles;
 };
 
-
 const getCode = (styles, name) => {
 	if (!styles || !name) {
 		return '';
 	}
 	return styles._all[name] || '';
-}
+};
 
 const getFamily = (styles, name, solid, regular, brands) => {
 	if (!styles || !name) {
@@ -68,7 +67,7 @@ const getFamily = (styles, name, solid, regular, brands) => {
 		return regular;
 	}
 	return solid;
-}
+};
 
 const getWeight = (styles, name) => {
 	if (!styles || !name) {
@@ -79,25 +78,25 @@ const getWeight = (styles, name) => {
 		return Font.Black;
 	}
 	return Font.Normal;
-}
+};
 
 const getAll = (styles) => {
 	if (!styles) {
 		return {};
 	}
 	return styles._all;
-}
+};
 
 const getUnique = (styles) => {
 	if (!styles) {
 		return {};
 	}
 	return styles._unique;
-}
+};
 
 const getList = (styles) => {
 	if (!styles) {
 		return [];
 	}
 	return styles._list;
-}
+};
