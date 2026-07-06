@@ -11,7 +11,7 @@ npm install @node-3d/qml-fontawesome
 ![Example](examples/screenshot.png)
 
 Provides **FontAwesome 6+** icons and helpers for QML. It is possible but not obligatory
-to use this repo as NPM module.
+to use this repo as an npm module.
 
 
 ## Features
@@ -119,7 +119,7 @@ ready to grab it. Or use this repo as a submodule if you wish.
 
 This software uses the [FontAwesome 6 Free](https://fontawesome.com/).
 
-FontAwesome licensing information (a COPY) is given in a [separate file](/FontAwesome/webfonts/LICENSE.txt),
+FontAwesome licensing information (a copy) is given in a [separate file](FontAwesome/webfonts/LICENSE.txt),
 which also can be found in
 [FontAwesome official repo](https://github.com/FortAwesome/Font-Awesome/blob/6.x/LICENSE.txt).
 
