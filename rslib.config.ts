@@ -15,7 +15,7 @@ export default defineConfig({
 				entry: {
 					index: ['./ts/**/*.ts'],
 				},
-				tsconfigPath: './tsconfig.json',
+				tsconfigPath: './tsconfig.build.json',
 			},
 			output: {
 				target: 'node',
