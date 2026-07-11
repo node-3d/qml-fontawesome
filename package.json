@@ -36,7 +36,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/node-3d/qml-fontawesome.git"
+		"url": "git+https://github.com/node-3d/qml-fontawesome.git"
 	},
 	"dependencies": {},
 	"type": "module",
