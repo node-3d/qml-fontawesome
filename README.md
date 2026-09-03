@@ -103,6 +103,8 @@ qmlEngine->addImportPath("path to @node-3d/qml-fontawesome");
 
 ### Node.js @node-3d/qml
 
+`absPath` is the package root, which contains the `FontAwesome` QML module.
+
 ```js
 import { absPath } from '@node-3d/qml-fontawesome';
 
