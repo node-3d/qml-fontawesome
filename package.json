@@ -16,11 +16,10 @@
 	"files": [
 		"dist",
 		"FontAwesome",
-		"LICENSE",
-		"package.json",
-		"tsconfig.json"
+		"LICENSE"
 	],
 	"scripts": {
+		"i": "npm install --workspaces=false",
 		"lint:oxlint": "oxlint .",
 		"lint:all": "npm run lint:ts && npm run lint:oxlint",
 		"build:ci": "rslib build",
