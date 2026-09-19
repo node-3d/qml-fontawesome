@@ -28,7 +28,7 @@ const categorize = (data) => {
 		_list: [],
 	};
 	for (const [k, v] of Object.entries(data)) {
-			const aliases = [...(v.aliases?.names ?? []), k];
+		const aliases = [...(v.aliases?.names ?? []), k];
 		for (const alias of aliases) {
 			for (const style of v.free) {
 				const isO = style === 'regular' && v.free.length > 1 && v.free.includes('solid');
@@ -52,7 +52,7 @@ const getCode = (styles, name) => {
 	if (!styles || !name) {
 		return '';
 	}
-		return styles._all[name] ?? '';
+	return styles._all[name] ?? '';
 };
 
 const getFamily = (styles, name, solid, regular, brands) => {
