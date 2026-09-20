@@ -43,10 +43,12 @@
 	"devDependencies": {
 		"@node-3d/core": "6.3.0",
 		"@node-3d/plugin-qml": "5.0.0",
+		"@types/three": "0.185.4",
 		"@node-3d/addon-tools": "10.1.0",
 		"oxlint": "1.81.0",
 		"oxlint-tsgolint": "7.0.2001",
 		"tslib": "2.8.1",
+		"three": "0.185.1",
 		"@rslib/core": "1.0.0",
 		"@types/node": "24.13.2",
 		"oxfmt": "0.66.0",
