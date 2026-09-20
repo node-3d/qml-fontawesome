@@ -11,7 +11,7 @@ const { doc } = init({
 	width: 160 * 4,
 	height: 90 * 4,
 });
-addThreeHelpers(three);
+addThreeHelpers();
 
 const { QmlOverlay, loop, View } = initQml({ doc, gl, cwd: process.cwd(), three });
 View.libs('..'); // i.e. "examples/.." - the root of this repo, where the lib is located
@@ -23,7 +23,7 @@ icon.on('load', () => {
 	}
 });
 
-const screen = new Screen({ three });
+const screen = new Screen();
 
 const overlay = new QmlOverlay({ file: 'qml/gui.qml' });
 screen.scene.add(overlay.mesh);
