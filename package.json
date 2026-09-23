@@ -20,6 +20,7 @@
 	],
 	"scripts": {
 		"i": "npm install --workspaces=false",
+		"example": "cd examples && node main.ts",
 		"lint:oxlint": "oxlint .",
 		"lint:all": "npm run lint:ts && npm run lint:oxlint",
 		"build:ci": "rslib build",
