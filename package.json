@@ -42,8 +42,8 @@
 	"dependencies": {},
 	"type": "module",
 	"devDependencies": {
-		"@node-3d/core": "~6.3.0",
-		"@node-3d/plugin-qml": "~5.0.0",
+		"@node-3d/core": "~6.4.0",
+		"@node-3d/plugin-qml": "~5.0.1",
 		"@types/three": "0.186.0",
 		"@node-3d/addon-tools": "~10.1.0",
 		"oxlint": "1.81.0",
