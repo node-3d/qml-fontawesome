@@ -1,0 +1,13 @@
+{
+	"name": "qml-fontawesome-consumer-test",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"test": "node --test \"*.test.ts\""
+	},
+	"dependencies": {
+		"@node-3d/core": "6.4.1",
+		"@node-3d/plugin-qml": "5.0.2",
+		"three": "0.186.1"
+	}
+}

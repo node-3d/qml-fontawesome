@@ -1,4 +1,9 @@
 {
 	"extends": "@node-3d/addon-tools/tsconfig.base.json",
-	"include": ["*.ts", "ts/**/*.ts", "examples/**/*.ts"]
+	"compilerOptions": {
+		"paths": {
+			"@node-3d/qml-fontawesome": ["./ts/index.ts"]
+		}
+	},
+	"include": ["*.ts", "ts/**/*.ts", "test/**/*.ts", "examples/**/*.ts"]
 }
